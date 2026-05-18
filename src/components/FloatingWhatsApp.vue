@@ -21,7 +21,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     v-show="visible"
-    class="fixed bottom-5 right-5 md:bottom-8 md:right-8 z-50 flex flex-col items-end gap-3"
+    class="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 md:bottom-8 md:right-8 z-50 flex flex-col items-end gap-3"
   >
     <transition
       enter-active-class="transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
@@ -31,9 +31,9 @@ onBeforeUnmount(() => {
     >
       <div
         v-if="expanded"
-        class="shell !p-1 !rounded-3xl bg-cream-50/90 backdrop-blur-xl"
+        class="shell !p-1 !rounded-3xl bg-cream-50/95 backdrop-blur-xl"
       >
-        <div class="core p-2.5 w-[260px]">
+        <div class="core p-2.5 w-[min(86vw,260px)]">
           <div class="px-2 pt-1 pb-2 font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">
             Pilih nomor
           </div>

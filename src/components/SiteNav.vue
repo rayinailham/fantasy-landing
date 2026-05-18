@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
 import { STUDIO } from '../data/studio'
 import { getLenis } from '../composables/useLenis'
 
@@ -29,12 +29,25 @@ function go(target) {
   }
 }
 
+// Lock background scroll while mobile menu is open
+watch(open, (isOpen) => {
+  const lenis = getLenis()
+  if (isOpen) {
+    lenis?.stop()
+    document.body.style.overflow = 'hidden'
+  } else {
+    lenis?.start()
+    document.body.style.overflow = ''
+  }
+})
+
 onMounted(() => {
   onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 })
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
+  document.body.style.overflow = ''
 })
 </script>
 
@@ -75,10 +88,10 @@ onBeforeUnmount(() => {
         :href="STUDIO.whatsapp.primary.href"
         target="_blank"
         rel="noopener"
-        class="btn-warm !py-2 !pl-4"
+        class="btn-warm !py-2 !pl-3 sm:!pl-4"
       >
-        <span class="text-[13px]">Booking</span>
-        <span class="pip">
+        <span class="text-[12px] sm:text-[13px]">Booking</span>
+        <span class="pip !w-7 !h-7 sm:!w-[2.1rem] sm:!h-[2.1rem]">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 17 17 7" /><path d="M8 7h9v9" />
           </svg>
@@ -88,7 +101,8 @@ onBeforeUnmount(() => {
       <button
         @click="open = !open"
         class="md:hidden relative w-10 h-10 rounded-full bg-cream-100/80 border border-clay-700/10 flex items-center justify-center"
-        aria-label="Menu"
+        :aria-label="open ? 'Tutup menu' : 'Buka menu'"
+        :aria-expanded="open"
       >
         <span class="absolute left-1/2 -translate-x-1/2 w-4 h-px bg-ink-900 transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
           :class="open ? 'rotate-45 translate-y-0' : '-translate-y-1'"></span>
@@ -106,20 +120,20 @@ onBeforeUnmount(() => {
     >
       <div
         v-if="open"
-        class="fixed inset-0 z-40 bg-cream-50/90 backdrop-blur-2xl flex flex-col justify-center px-6 pointer-events-auto md:hidden"
+        class="fixed inset-0 z-40 bg-cream-50/95 backdrop-blur-2xl flex flex-col justify-center px-6 pt-24 pb-10 pointer-events-auto md:hidden"
       >
-        <ul class="space-y-4">
+        <ul class="space-y-2 sm:space-y-4">
           <li v-for="(l, i) in links" :key="l.target" :style="{ transitionDelay: `${i * 60}ms` }" class="reveal is-visible">
             <button
               @click="go(l.target)"
-              class="text-left block w-full py-2 font-display font-semibold text-4xl tracking-tightest"
+              class="text-left block w-full py-2 font-display font-semibold text-[clamp(2rem,9vw,2.5rem)] tracking-tightest"
             >
               {{ l.label }}
-              <span class="font-mono text-xs tracking-[0.32em] text-clay-600/70 ml-3 align-middle">0{{ i + 1 }}</span>
+              <span class="font-mono text-[10px] sm:text-xs tracking-[0.3em] sm:tracking-[0.32em] text-clay-600/70 ml-2 sm:ml-3 align-middle">0{{ i + 1 }}</span>
             </button>
           </li>
         </ul>
-        <a :href="STUDIO.whatsapp.primary.href" target="_blank" rel="noopener" class="btn-warm mt-10 w-fit">
+        <a :href="STUDIO.whatsapp.primary.href" target="_blank" rel="noopener" class="btn-warm mt-8 sm:mt-10 w-fit">
           <span>Hubungi via WhatsApp</span>
           <span class="pip">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
