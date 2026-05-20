@@ -7,23 +7,25 @@ const visible = ref(false)
 const dragging = ref(false)
 let railEl = null
 const railRef = ref(null)
-let raf = 0
+let lenisOff = null
 
-function update() {
-  const doc = document.documentElement
-  const max = doc.scrollHeight - window.innerHeight
-  if (max <= 0) {
+function setProgress(scroll, limit) {
+  if (limit <= 0) {
     progress.value = 0
     visible.value = false
     return
   }
   visible.value = true
-  progress.value = Math.min(1, Math.max(0, window.scrollY / max))
+  progress.value = Math.min(1, Math.max(0, scroll / limit))
 }
 
-function onScroll() {
-  cancelAnimationFrame(raf)
-  raf = requestAnimationFrame(update)
+function onLenisScroll({ scroll, limit }) {
+  setProgress(scroll, limit)
+}
+
+function fallbackScroll() {
+  const max = document.documentElement.scrollHeight - window.innerHeight
+  setProgress(window.scrollY, max)
 }
 
 function onDown(e) {
@@ -45,26 +47,46 @@ function jumpTo(e) {
   if (!railEl) return
   const rect = railEl.getBoundingClientRect()
   const ratio = Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height))
-  const max = document.documentElement.scrollHeight - window.innerHeight
-  const target = ratio * max
   const lenis = getLenis()
   if (lenis) {
-    lenis.scrollTo(target, { immediate: true })
+    const target = ratio * lenis.limit
+    // Drag = direct jog (immediate), no easing fight.
+    lenis.scrollTo(target, { immediate: dragging.value, lock: dragging.value })
   } else {
-    window.scrollTo(0, target)
+    const max = document.documentElement.scrollHeight - window.innerHeight
+    window.scrollTo(0, ratio * max)
   }
+}
+
+function tryAttachLenis() {
+  const lenis = getLenis()
+  if (lenis) {
+    setProgress(lenis.scroll, lenis.limit)
+    lenis.on('scroll', onLenisScroll)
+    lenisOff = () => lenis.off('scroll', onLenisScroll)
+    return true
+  }
+  return false
 }
 
 onMounted(() => {
   railEl = railRef.value
-  update()
-  window.addEventListener('scroll', onScroll, { passive: true })
-  window.addEventListener('resize', update)
+  // Lenis may not exist yet (intro screen). Poll briefly, then fall back.
+  if (!tryAttachLenis()) {
+    fallbackScroll()
+    const tick = setInterval(() => {
+      if (tryAttachLenis()) clearInterval(tick)
+    }, 200)
+    setTimeout(() => clearInterval(tick), 5000)
+    window.addEventListener('scroll', fallbackScroll, { passive: true })
+    window.addEventListener('resize', fallbackScroll)
+  }
 })
+
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', onScroll)
-  window.removeEventListener('resize', update)
-  cancelAnimationFrame(raf)
+  if (lenisOff) lenisOff()
+  window.removeEventListener('scroll', fallbackScroll)
+  window.removeEventListener('resize', fallbackScroll)
 })
 </script>
 
@@ -82,11 +104,12 @@ onBeforeUnmount(() => {
       class="relative w-[3px] h-[40vh] rounded-full bg-clay-700/10 cursor-pointer"
     >
       <div
-        class="absolute left-1/2 -translate-x-1/2 w-[7px] rounded-full bg-ink-800 transition-[height] duration-200 ease-out"
+        class="absolute left-1/2 w-[7px] rounded-full bg-ink-800"
         :style="{
           top: `calc(${progress * 100}% - 14px)`,
           height: '28px',
-          transform: 'translateX(-50%)'
+          transform: 'translateX(-50%)',
+          willChange: 'top'
         }"
       ></div>
     </div>

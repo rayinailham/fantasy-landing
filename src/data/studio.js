@@ -54,6 +54,34 @@ export const HORIZONTAL_PANELS = [
     body: 'Album 100 foto, video cinematic, sampai dokumentasi 9 jam penuh. Kami susun jadi memori yang ngalir.',
     seed: 'wedding-celebration-7',
     tone: 'cream'
+  },
+  {
+    kicker: '06 — Solo',
+    title: 'Potret diri\ntanpa terburu-buru',
+    body: 'Sesi sendirian buat portfolio, kado, atau sekadar punya foto diri yang enak dilihat lima tahun lagi.',
+    seed: 'solo-warm-portrait',
+    tone: 'clay'
+  },
+  {
+    kicker: '07 — Duo',
+    title: 'Berdua sama\nyang paling dekat',
+    body: 'Sahabat, saudara, atau pasangan. Dua orang, satu frame, dengan tone hangat khas studio kami.',
+    seed: 'duo-bestie-warm',
+    tone: 'sage'
+  },
+  {
+    kicker: '08 — Trio',
+    title: 'Bertiga\ndalam satu cerita',
+    body: 'Geng kecil, saudara kandung, atau trio bestie. Komposisi tiga orang yang seimbang dan natural.',
+    seed: 'trio-warm-tone',
+    tone: 'ember'
+  },
+  {
+    kicker: '09 — Bersama',
+    title: 'Rame-rame\ndalam satu frame',
+    body: 'Reuni, tim kerja, atau keluarga besar. Kami biasa nge-handle 18 orang lebih, semua kebagian ruang di frame.',
+    seed: 'bersama-group-warm',
+    tone: 'cream'
   }
 ]
 

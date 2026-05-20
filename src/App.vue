@@ -29,14 +29,19 @@ function startSiteAnimations() {
   if (introDone.value) return
   introDone.value = true
 
-  // Lenis smooth scroll boots only after intro
+  // Lenis smooth scroll boots only after intro.
+  // Single RAF source: gsap.ticker drives Lenis (autoRaf disabled in createLenis).
   lenisInstance = createLenis()
   lenisInstance.on('scroll', ScrollTrigger.update)
   rafCallback = (time) => {
     lenisInstance.raf(time * 1000)
   }
   gsap.ticker.add(rafCallback)
-  gsap.ticker.lagSmoothing(0)
+  // Tolerate small frame hitches without snapping animations forward.
+  gsap.ticker.lagSmoothing(500, 33)
+
+  // Layout settled — make sure ScrollTrigger picks up real positions.
+  requestAnimationFrame(() => ScrollTrigger.refresh())
 
   // Reveal observer — attach AFTER intro so hero reveals fire fresh
   observer = new IntersectionObserver(

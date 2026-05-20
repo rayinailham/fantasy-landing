@@ -1,9 +1,10 @@
 <script setup>
 import { STUDIO } from '../data/studio'
+import { HERO_IMAGES } from '../data/images'
 </script>
 
 <template>
-  <section id="top" class="relative min-h-[100dvh] overflow-hidden pt-24 sm:pt-28 md:pt-36 pb-12 sm:pb-16 md:pb-24">
+  <section id="top" class="relative min-h-[100dvh] overflow-hidden pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 md:pb-16">
     <!-- Background warm gradient & noise -->
     <div class="absolute inset-0 -z-10 bg-cream-50">
       <div class="absolute -top-32 -left-20 w-[60vw] h-[60vw] rounded-full opacity-60 blur-3xl"
@@ -69,35 +70,51 @@ import { STUDIO } from '../data/studio'
           </div>
         </div>
 
-        <!-- RIGHT: cascade of warm portrait cards -->
+        <!-- RIGHT: editorial stack — front landscape dominan, back portrait offset kanan-atas
+             back  = 3-saudari.JPG       3648x5472 → aspect 2/3
+             front = Keluarga-berlima.JPG 5472x3648 → aspect 3/2 -->
         <div class="lg:col-span-5 xl:col-span-5">
-          <div class="relative h-[380px] sm:h-[520px] lg:h-[640px]">
-            <!-- back card -->
-            <div class="reveal absolute top-0 right-0 w-[68%] h-[78%] shell rotate-[3deg]">
-              <div class="core warm-image h-full"
-                :style="{ backgroundImage: `url('https://picsum.photos/seed/fantasy-warm-fam-1/1100/1400')`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+          <div class="relative h-[520px] sm:h-[720px] lg:h-[780px]">
+            <!-- back card (portrait) — kanan-atas, lebih besar, rotasi halus -->
+            <div class="reveal absolute top-0 right-[-3%] sm:right-[-4%] w-[64%] sm:w-[60%] lg:w-[58%] aspect-[2/3] shell rotate-[1.5deg] z-10">
+              <div class="core warm-image h-full overflow-hidden">
+                <img
+                  :src="HERO_IMAGES.back"
+                  alt="Sesi bestie hangat di studio"
+                  class="w-full h-full object-cover object-center"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
               </div>
             </div>
-            <!-- front card -->
-            <div class="reveal absolute bottom-0 left-0 w-[68%] h-[78%] shell -rotate-[2.5deg]">
-              <div class="core warm-image h-full"
-                :style="{ backgroundImage: `url('https://picsum.photos/seed/fantasy-prewed-warm-7/1100/1400')`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+            <!-- front card (landscape) — dominan, tengah-bawah, overlap ringan -->
+            <div class="reveal absolute left-0 right-0 bottom-[80px] sm:bottom-[110px] lg:bottom-[130px] w-full aspect-[3/2] shell -rotate-[1.5deg] z-20">
+              <div class="core warm-image h-full overflow-hidden">
+                <img
+                  :src="HERO_IMAGES.front"
+                  alt="Sesi pasangan tone hangat"
+                  class="w-full h-full object-cover object-center"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
+                />
               </div>
             </div>
-            <!-- floating tag -->
-            <div class="reveal absolute bottom-6 sm:bottom-8 right-2 sm:right-6 shell !p-1 !rounded-full bg-cream-50/90 backdrop-blur">
+            <!-- floating tag — di pojok kanan-bawah front card -->
+            <div class="reveal absolute bottom-[60px] sm:bottom-[88px] lg:bottom-[108px] right-3 sm:right-5 shell !p-1 !rounded-full bg-cream-50/90 backdrop-blur z-30">
               <div class="core !rounded-full px-3 py-1.5 sm:px-4 sm:py-2 flex items-center gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-ember-500 animate-pulse"></span>
                 <span class="font-mono text-[10px] sm:text-[11px] tracking-[0.22em] sm:tracking-[0.26em] text-clay-700/80 uppercase">Open today</span>
               </div>
             </div>
 
-            <!-- floating mini-card top right (sm+ only) -->
-            <div class="reveal hidden sm:block absolute top-[40%] -right-2 lg:-right-6 shell">
+            <!-- floating mini-card di zona overlap antara back & front (sm+ only) — geser jauh ke kiri biar tidak nutupi muka -->
+            <div class="reveal hidden sm:block absolute top-[27%] left-[8%] lg:left-[2%] shell z-30">
               <div class="core p-4 max-w-[200px]">
                 <div class="font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">Last booking</div>
                 <div class="mt-2 text-[13px] leading-snug text-ink-900">
-                  Keluarga <span class="font-medium">Hartanto</span> — sesi family 9 orang, frame 12R.
+                  Sesi <span class="font-medium">keluarga bahagia</span> &mdash; family 5 orang, frame 12R.
                 </div>
                 <div class="mt-3 flex -space-x-1.5">
                   <span v-for="(_, i) in 4" :key="i" class="w-6 h-6 rounded-full ring-2 ring-white"

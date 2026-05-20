@@ -3,10 +3,16 @@ import { onMounted, onBeforeUnmount, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { HORIZONTAL_PANELS, STUDIO } from '../data/studio'
+import { PANEL_IMAGES, PANEL_OBJECT_POSITIONS, PANEL_TRANSFORMS, PANEL_OBJECT_FITS } from '../data/images'
 
 const pinRef = ref(null)
 const trackRef = ref(null)
+const isMobile = ref(false)
 let mm = null
+let mql = null
+function syncIsMobile(e) {
+  isMobile.value = e.matches
+}
 
 function tonePalette(tone) {
   switch (tone) {
@@ -23,6 +29,15 @@ function tonePalette(tone) {
 
 onMounted(() => {
   if (!pinRef.value || !trackRef.value) return
+
+  // Track viewport class so data-lenis-prevent only applies on mobile (where
+  // the track is a native horizontal scroller). On desktop the track is
+  // GSAP-driven, so Lenis must keep handling vertical wheel through it.
+  mql = window.matchMedia('(max-width: 900px)')
+  isMobile.value = mql.matches
+  if (mql.addEventListener) mql.addEventListener('change', syncIsMobile)
+  else mql.addListener(syncIsMobile)
+
   mm = gsap.matchMedia()
 
   mm.add('(min-width: 901px)', () => {
@@ -31,7 +46,8 @@ onMounted(() => {
 
     const tween = gsap.to(track, {
       x: () => -totalScroll(),
-      ease: 'none'
+      ease: 'none',
+      force3D: true
     })
 
     const st = ScrollTrigger.create({
@@ -39,7 +55,7 @@ onMounted(() => {
       start: 'top top',
       end: () => '+=' + totalScroll(),
       pin: true,
-      scrub: 0.6,
+      scrub: true,
       animation: tween,
       anticipatePin: 1,
       invalidateOnRefresh: true
@@ -54,6 +70,10 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   if (mm) mm.revert()
+  if (mql) {
+    if (mql.removeEventListener) mql.removeEventListener('change', syncIsMobile)
+    else mql.removeListener(syncIsMobile)
+  }
 })
 </script>
 
@@ -68,8 +88,8 @@ onBeforeUnmount(() => {
             <span>Apa yang kami garap</span>
           </div>
           <h2 class="reveal h-display mt-4 sm:mt-5 text-[clamp(2.25rem,9vw,3.75rem)] lg:text-6xl">
-            Lima cerita,<br />
-            <span class="h-editorial italic text-clay-600">satu studio kecil</span>.
+            Banyak cerita,<br />
+            <span class="h-editorial italic text-clay-600">satu studio kecil</span>
           </h2>
         </div>
         <div class="reveal hidden md:flex items-center gap-3 font-mono text-[11px] tracking-[0.28em] uppercase text-clay-700/70 pb-2">
@@ -92,6 +112,7 @@ onBeforeUnmount(() => {
     >
       <div
         ref="trackRef"
+        :data-lenis-prevent="isMobile ? '' : null"
         class="
           flex items-stretch lg:items-center
           gap-4 sm:gap-5 md:gap-10
@@ -122,14 +143,18 @@ onBeforeUnmount(() => {
               :style="{ background: tonePalette(p.tone).bg }"
             >
               <!-- BG image -->
-              <div
-                class="absolute inset-0 opacity-90"
+              <img
+                :src="PANEL_IMAGES[i]"
+                :alt="p.title.replace('\n', ' ')"
+                class="absolute inset-0 w-full h-full opacity-90"
                 :style="{
-                  backgroundImage: `url('https://picsum.photos/seed/${p.seed}/1400/1700')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  objectFit: PANEL_OBJECT_FITS[i] || 'cover',
+                  objectPosition: PANEL_OBJECT_POSITIONS[i] || 'center top',
+                  transform: PANEL_TRANSFORMS[i] || undefined
                 }"
-              ></div>
+                loading="lazy"
+                decoding="async"
+              />
               <!-- warm overlay -->
               <div class="absolute inset-0"
                 style="background: linear-gradient(180deg, rgba(42,31,24,0.05) 30%, rgba(42,31,24,0.55) 100%);"></div>
