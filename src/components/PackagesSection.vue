@@ -18,9 +18,9 @@ function group(id) {
         <div class="lg:col-span-7">
           <div class="reveal eyebrow"><span class="dot"></span><span>Daftar paket</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl lg:text-7xl">
-            Pilih yang paling
-            <span class="h-editorial italic text-clay-600">pas</span>
-            buat momen kalian.
+            Pilih cara kalian
+            <span class="h-editorial italic text-clay-600">mengenang</span>
+            moment ini.
           </h2>
         </div>
         <div class="lg:col-span-5">

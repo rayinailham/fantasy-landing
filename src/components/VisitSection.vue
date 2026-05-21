@@ -10,8 +10,8 @@ import { STUDIO } from '../data/studio'
         <div class="lg:col-span-5">
           <div class="reveal eyebrow"><span class="dot"></span><span>Mampir ke studio</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl">
-            Datang langsung,<br />
-            <span class="h-editorial italic text-clay-600">ngobrol</span> dulu pun boleh.
+            Datang kapan aja.<br />
+            <span class="h-editorial italic text-clay-600">Ngobrol</span> dulu juga boleh.
           </h2>
           <p class="reveal mt-6 sm:mt-7 text-[14.5px] sm:text-[15px] md:text-[16px] text-clay-700/85 leading-relaxed max-w-[44ch]">
             Studio kami ada di Pelabuhanratu &mdash; daerah Batu Sapi. Kalau bingung paketnya, mampir aja sambil ngeliat-liat hasil cetakan dan contoh frame.

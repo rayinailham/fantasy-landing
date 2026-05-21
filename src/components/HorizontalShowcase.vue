@@ -88,8 +88,8 @@ onBeforeUnmount(() => {
             <span>Apa yang kami garap</span>
           </div>
           <h2 class="reveal h-display mt-4 sm:mt-5 text-[clamp(2.25rem,9vw,3.75rem)] lg:text-6xl">
-            Banyak cerita,<br />
-            <span class="h-editorial italic text-clay-600">satu studio kecil</span>
+            Tiap keluarga punya cerita yang berbeda.<br />
+            <span class="h-editorial italic text-clay-600">Tapi kami simpan semuanya.</span>
           </h2>
         </div>
         <div class="reveal hidden md:flex items-center gap-3 font-mono text-[11px] tracking-[0.28em] uppercase text-clay-700/70 pb-2">

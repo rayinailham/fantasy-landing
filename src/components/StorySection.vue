@@ -19,18 +19,15 @@ const points = [
             <span class="dot"></span>
             <span>Tentang kami</span>
           </div>
-          <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl lg:text-7xl">
-            Foto yang
-            <span class="h-editorial text-clay-600 italic">tetap dipajang</span>
-            di ruang tamu, bukan cuma ngendap di galeri HP.
+          <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2rem,7.5vw,3.25rem)] md:text-5xl lg:text-6xl">
+            Mereka bilang cuma foto. Tapi tiap kali
+            <span class="h-editorial text-clay-600 italic">lewat ruang tamu</span>,
+            mereka berhenti sebentar.
           </h2>
         </div>
         <div class="lg:col-span-6 lg:col-start-7 lg:pt-12">
           <p class="reveal text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed max-w-[55ch]">
-            Kami mulai dari studio kecil di {{ STUDIO.address.split(',')[2]?.trim() || 'Pelabuhanratu' }}. Yang bantu motret, ngedit, sampai antar bingkai ke pelanggan, ya keluarga sendiri. Itu kenapa setiap sesi punya tone yang sama: hangat, sabar, dan personal.
-          </p>
-          <p class="reveal mt-4 sm:mt-5 text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed max-w-[55ch]">
-            Hasil akhir tujuannya satu &mdash; foto yang masih nyaman dilihat 10 tahun lagi.
+            Gak buru-buru. Kami arahin satu-satu, bisa cetak hari itu juga, bingkai langsung jadi. Yang kalian bawa pulang bukan cuma file &mdash; tapi kenangan yang bisa dipajang.
           </p>
         </div>
       </div>

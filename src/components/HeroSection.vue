@@ -22,16 +22,16 @@ import { HERO_IMAGES } from '../data/images'
             <span>Pelabuhanratu, Sukabumi · Sejak 2014</span>
           </div>
 
-          <h1 class="reveal h-display text-[clamp(3rem,13vw,5.25rem)] sm:text-[12vw] lg:text-[8.4vw] xl:text-[7.4vw] leading-[0.9] sm:leading-[0.88]">
-            <span class="block">Studio foto</span>
+          <h1 class="reveal h-display text-[clamp(2.5rem,11vw,4.5rem)] sm:text-[10vw] lg:text-[7vw] xl:text-[6.2vw] leading-[0.9] sm:leading-[0.88]">
+            <span class="block">Momen cepat berlalu.</span>
             <span class="block">
-              yang dijaga
-              <span class="h-editorial align-baseline text-clay-600 italic">keluarga</span>.
+              Foto
+              <span class="h-editorial align-baseline text-clay-600 italic">enggak</span>.
             </span>
           </h1>
 
           <p class="reveal mt-6 sm:mt-8 max-w-[52ch] text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed">
-            Fantasy Studio Foto bukan rantai franchise. Kami keluarga kecil di Pelabuhanratu yang ngerawat satu studio sendiri &mdash; dari arahan pose, lighting hangat, sampai bingkai yang kalian bawa pulang. Setiap sesi diperlakukan kayak nemenin keluarga sendiri foto bareng.
+            Di sini momen kalian dijaga. Diarahin pelan-pelan, dicetak hari itu juga, dibingkai buat dipajang bertahun-tahun.
           </p>
 
           <div class="reveal mt-7 sm:mt-9 flex flex-wrap items-center gap-3">

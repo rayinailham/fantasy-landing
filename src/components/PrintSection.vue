@@ -9,9 +9,8 @@ import { PRINT_SIZES, rupiah, STUDIO } from '../data/studio'
         <div class="lg:col-span-6">
           <div class="reveal eyebrow"><span class="dot"></span><span>Cetak & bingkai</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl">
-            Cetak dari 2R<br />
-            sampai
-            <span class="h-editorial italic text-clay-600">60×90</span>.
+            Layar retak, file kehapus.<br />
+            <span class="h-editorial italic text-clay-600">Cetakan</span> tetap di dinding.
           </h2>
         </div>
         <div class="lg:col-span-5 lg:col-start-8">
