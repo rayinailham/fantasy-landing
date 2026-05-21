@@ -14,7 +14,7 @@ import { HERO_IMAGES } from '../data/images'
     </div>
 
     <div class="max-w-[1400px] mx-auto px-5 sm:px-6 md:px-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 sm:gap-y-12 lg:gap-x-10 items-end">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-y-10 sm:gap-y-12 lg:gap-x-10 items-start">
         <!-- LEFT: editorial type block -->
         <div class="lg:col-span-7 xl:col-span-7">
           <div class="reveal eyebrow mb-5 sm:mb-7">
