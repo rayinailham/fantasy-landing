@@ -16,7 +16,7 @@ import { PRINT_SIZES, rupiah, STUDIO } from '../data/studio'
         </div>
         <div class="lg:col-span-5 lg:col-start-8">
           <p class="reveal text-[14.5px] sm:text-[15px] md:text-[16px] text-clay-700/85 leading-relaxed max-w-[42ch]">
-            Cetak satuan, plus bingkai single atau double. Bawa file kalian, atau pakai hasil dari sesi paket. Bingkai kayu hangat, ditingkatkan tahun ke tahun bareng tukang langganan kami.
+            Cetak satuan, plus bingkai single atau double. Bawa file kalian, atau pakai hasil dari sesi paket. Bingkai kayu hangat, dirakit langsung sama tukang langganan kami sejak studio buka.
           </p>
         </div>
       </div>

@@ -29,7 +29,7 @@ const rowC = computed(() => [...tilesC.value, ...tilesC.value])
         </div>
         <div class="lg:col-span-4 lg:col-start-9">
           <p class="reveal text-[14.5px] sm:text-[15px] text-clay-700/85 leading-relaxed max-w-[40ch]">
-            Galeri ini bergulir terus &mdash; tinggalkan dia berjalan sebentar, mungkin kalian nemu vibe yang pas buat sesi kalian sendiri.
+            Galeri ini bergulir terus &mdash; biarin jalan sebentar, mungkin kalian nemu vibe yang pas buat sesi kalian sendiri.
           </p>
         </div>
       </div>

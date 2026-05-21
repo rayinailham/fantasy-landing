@@ -19,7 +19,7 @@ import { HERO_IMAGES } from '../data/images'
         <div class="lg:col-span-7 xl:col-span-7">
           <div class="reveal eyebrow mb-5 sm:mb-7">
             <span class="dot"></span>
-            <span>Pelabuhanratu, Sukabumi · Sejak Keluarga</span>
+            <span>Pelabuhanratu, Sukabumi · Sejak 2014</span>
           </div>
 
           <h1 class="reveal h-display text-[clamp(3rem,13vw,5.25rem)] sm:text-[12vw] lg:text-[8.4vw] xl:text-[7.4vw] leading-[0.9] sm:leading-[0.88]">
@@ -31,7 +31,7 @@ import { HERO_IMAGES } from '../data/images'
           </h1>
 
           <p class="reveal mt-6 sm:mt-8 max-w-[52ch] text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed">
-            Fantasy Studio Foto bukan rantai franchise. Kami keluarga kecil di Pelabuhanratu yang ngerawat satu studio &mdash; dari arahan pose, lighting hangat, sampai bingkai yang kalian bawa pulang. Setiap sesi diperlakukan kayak nemenin keluarga sendiri foto bareng.
+            Fantasy Studio Foto bukan rantai franchise. Kami keluarga kecil di Pelabuhanratu yang ngerawat satu studio sendiri &mdash; dari arahan pose, lighting hangat, sampai bingkai yang kalian bawa pulang. Setiap sesi diperlakukan kayak nemenin keluarga sendiri foto bareng.
           </p>
 
           <div class="reveal mt-7 sm:mt-9 flex flex-wrap items-center gap-3">
@@ -80,7 +80,7 @@ import { HERO_IMAGES } from '../data/images'
               <div class="core warm-image h-full overflow-hidden">
                 <img
                   :src="HERO_IMAGES.back"
-                  alt="Sesi bestie hangat di studio"
+                  alt="Sesi foto bestie tone hangat di Fantasy Studio Foto Pelabuhanratu"
                   class="w-full h-full object-cover object-center"
                   loading="eager"
                   fetchpriority="high"
@@ -93,7 +93,7 @@ import { HERO_IMAGES } from '../data/images'
               <div class="core warm-image h-full overflow-hidden">
                 <img
                   :src="HERO_IMAGES.front"
-                  alt="Sesi pasangan tone hangat"
+                  alt="Foto keluarga lima orang di studio foto Pelabuhanratu, Sukabumi"
                   class="w-full h-full object-cover object-center"
                   loading="eager"
                   fetchpriority="high"
