@@ -9,13 +9,13 @@ import { PRINT_SIZES, rupiah, STUDIO } from '../data/studio'
         <div class="lg:col-span-6">
           <div class="reveal eyebrow"><span class="dot"></span><span>Cetak & bingkai</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl">
-            Layar retak, file kehapus.<br />
-            <span class="h-editorial italic text-clay-600">Cetakan</span> tetap di dinding.
+            HP rusak, file ilang.<br />
+            <span class="h-editorial italic text-clay-600">Cetakan</span> nemenin di dinding.
           </h2>
         </div>
         <div class="lg:col-span-5 lg:col-start-8">
           <p class="reveal text-[14.5px] sm:text-[15px] md:text-[16px] text-clay-700/85 leading-relaxed max-w-[42ch]">
-            Cetak satuan, plus bingkai single atau double. Bawa file kalian, atau pakai hasil dari sesi paket. Bingkai kayu hangat, dirakit langsung sama tukang langganan kami sejak studio buka.
+            Cetak satuan, ditambah bingkai single atau double. Bawa file sendiri, atau pakai hasil sesi paket. Bingkai kayunya dirakit sama tukang langganan kami sejak studio buka.
           </p>
         </div>
       </div>
@@ -89,10 +89,10 @@ import { PRINT_SIZES, rupiah, STUDIO } from '../data/studio'
 
       <div class="reveal mt-7 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-3 sm:items-center sm:justify-between">
         <p class="font-mono text-[11px] sm:text-[12px] tracking-[0.16em] uppercase text-clay-600/70">
-          · Penambahan file Rp 3.000 / file untuk paket dengan file edit
+          · Tambah file Rp 3.000 / file untuk paket dengan file edit
         </p>
         <a :href="STUDIO.whatsapp.primary.href" target="_blank" rel="noopener" class="btn-warm w-full sm:w-auto justify-between sm:justify-start">
-          <span>Konsultasi cetak besar</span>
+          <span>Tanya cetak ukuran besar</span>
           <span class="pip">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
               <path d="M7 17 17 7" /><path d="M8 7h9v9" />

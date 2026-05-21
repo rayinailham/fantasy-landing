@@ -23,7 +23,7 @@ const links = [
         <div class="lg:col-span-7">
           <div class="eyebrow !bg-cream-50/5 !border-cream-50/15 !text-cream-100/70">
             <span class="dot"></span>
-            <span>Sampai jumpa di studio</span>
+            <span>Sampai ketemu di studio</span>
           </div>
           <h3 class="h-display mt-5 sm:mt-6 text-[clamp(2.25rem,10vw,3.75rem)] md:text-6xl lg:text-[88px] leading-[0.95]">
             Bawa
@@ -98,7 +98,7 @@ const links = [
       </div>
 
       <div class="mt-12 sm:mt-16 pt-7 sm:pt-8 border-t border-cream-50/10 flex flex-col md:flex-row md:items-center md:justify-between gap-3 sm:gap-4 font-mono text-[10px] sm:text-[11px] tracking-[0.16em] sm:tracking-[0.18em] uppercase text-cream-100/45">
-        <span>© {{ year }} {{ STUDIO.name }}. Semua kenangan dijaga di sini.</span>
+        <span>© {{ year }} {{ STUDIO.name }}. Sharing your moment with us, sejak 2014.</span>
         <span class="text-cream-100/40">Pelabuhanratu · Sukabumi · Jawa Barat</span>
       </div>
     </div>

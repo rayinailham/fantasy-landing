@@ -85,11 +85,11 @@ onBeforeUnmount(() => {
         <div>
           <div class="reveal eyebrow">
             <span class="dot"></span>
-            <span>Apa yang kami garap</span>
+            <span>Yang biasa kami potret</span>
           </div>
           <h2 class="reveal h-display mt-4 sm:mt-5 text-[clamp(2.25rem,9vw,3.75rem)] lg:text-6xl">
-            Tiap keluarga punya cerita yang berbeda.<br />
-            <span class="h-editorial italic text-clay-600">Tapi kami simpan semuanya.</span>
+            Tiap keluarga punya cerita yang beda-beda.<br />
+            <span class="h-editorial italic text-clay-600">Kami simpan semuanya.</span>
           </h2>
         </div>
         <div class="reveal hidden md:flex items-center gap-3 font-mono text-[11px] tracking-[0.28em] uppercase text-clay-700/70 pb-2">
@@ -100,7 +100,7 @@ onBeforeUnmount(() => {
         <!-- Mobile hint -->
         <div class="reveal md:hidden flex items-center gap-2 font-mono text-[10px] tracking-[0.24em] uppercase text-clay-700/70 mt-2">
           <span class="w-6 h-px bg-clay-700/30"></span>
-          <span>Geser horizontal</span>
+          <span>Geser ke samping</span>
         </div>
       </div>
     </div>
@@ -158,14 +158,17 @@ onBeforeUnmount(() => {
               <!-- warm overlay -->
               <div class="absolute inset-0"
                 style="background: linear-gradient(180deg, rgba(42,31,24,0.05) 30%, rgba(42,31,24,0.55) 100%);"></div>
+              <!-- bottom-left vignette for text legibility -->
+              <div class="absolute inset-0 pointer-events-none"
+                style="background: radial-gradient(ellipse 70% 60% at 0% 100%, rgba(42,31,24,0.55), rgba(42,31,24,0) 65%);"></div>
 
               <!-- Content -->
               <div class="relative h-full flex flex-col justify-between p-5 sm:p-7 md:p-10 text-cream-50">
                 <div class="flex items-start justify-between gap-3">
-                  <span class="font-mono text-[10px] sm:text-[11px] tracking-[0.24em] sm:tracking-[0.28em] uppercase">
+                  <span class="font-mono text-[9px] sm:text-[10px] tracking-[0.22em] sm:tracking-[0.26em] uppercase">
                     {{ p.kicker }}
                   </span>
-                  <span class="font-mono text-[10px] sm:text-[11px] tracking-[0.24em] sm:tracking-[0.28em] uppercase shrink-0">
+                  <span class="font-mono text-[9px] sm:text-[10px] tracking-[0.22em] sm:tracking-[0.26em] uppercase shrink-0">
                     0{{ i + 1 }} / {{ HORIZONTAL_PANELS.length }}
                   </span>
                 </div>

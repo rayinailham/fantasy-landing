@@ -10,11 +10,11 @@ import { STUDIO } from '../data/studio'
         <div class="lg:col-span-5">
           <div class="reveal eyebrow"><span class="dot"></span><span>Mampir ke studio</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl">
-            Datang kapan aja.<br />
-            <span class="h-editorial italic text-clay-600">Ngobrol</span> dulu juga boleh.
+            Pintunya buka.<br />
+            <span class="h-editorial italic text-clay-600">Ngobrol</span> dulu juga gak apa-apa.
           </h2>
           <p class="reveal mt-6 sm:mt-7 text-[14.5px] sm:text-[15px] md:text-[16px] text-clay-700/85 leading-relaxed max-w-[44ch]">
-            Studio kami ada di Pelabuhanratu &mdash; daerah Batu Sapi. Kalau bingung paketnya, mampir aja sambil ngeliat-liat hasil cetakan dan contoh frame.
+            Studio kami di Pelabuhanratu, daerah Batu Sapi. Bingung pilih paket? Mampir aja, sambil ngeliat hasil cetakan dan contoh frame yang nempel di dinding.
           </p>
 
           <div class="reveal mt-8 sm:mt-10 shell">
@@ -152,9 +152,9 @@ import { STUDIO } from '../data/studio'
               <!-- Floating info card -->
               <div class="absolute bottom-4 left-4 right-4 sm:bottom-5 sm:left-5 sm:right-5 md:left-7 md:right-auto md:bottom-7 shell !p-1 md:max-w-md">
                 <div class="core p-4 sm:p-5 md:p-6">
-                  <div class="font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">Petunjuk arah</div>
+                  <div class="font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">Cara ke sini</div>
                   <p class="mt-2 text-[13px] sm:text-[14px] leading-relaxed text-ink-900 max-w-[42ch]">
-                    Sebelah ruko parkir Tamansari, di area Batu Sapi. Patokan: jalan masuk dari arah pelabuhan, ada papan nama berwarna hangat.
+                    Sebelah ruko parkir Tamansari, di area Batu Sapi. Patokannya: jalan masuk dari arah pelabuhan, ada papan nama warna hangat.
                   </p>
                   <a :href="STUDIO.maps" target="_blank" rel="noopener" class="mt-3 sm:mt-4 inline-flex items-center gap-2 text-[13px] font-medium">
                     <span>Petunjuk lengkap</span>

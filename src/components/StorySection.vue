@@ -2,10 +2,10 @@
 import { STUDIO } from '../data/studio'
 
 const points = [
-  { k: '01', t: 'Diarahin pelan-pelan', d: 'Gak buru-buru. Kami arahin pose, lighting, sampai posisi anak yang paling kecil.' },
-  { k: '02', t: 'Cetak di tempat', d: 'Hasil bisa dilihat dan dicetak hari itu juga. Bingkai langsung jadi.' },
-  { k: '03', t: 'Harga apa adanya', d: 'Tanpa biaya tersembunyi. Penambahan file Rp 3.000/file, jelas di muka.' },
-  { k: '04', t: 'Bisa anak-anak ramai', d: 'Tim kami terbiasa nge-handle keluarga besar dan anak-anak yang aktif.' }
+  { k: '01', t: 'Diarahin tanpa diburu', d: 'Kami nungguin sampai pose-nya enak. Anak yang paling kecil dapet giliran sendiri biar gak kena marah.' },
+  { k: '02', t: 'Cetak di tempat', d: 'Pulang dari sini bawa cetakan, bukan cuma file. Bingkainya juga selesai hari itu.' },
+  { k: '03', t: 'Harga apa adanya', d: 'Yang ditulis ya yang dibayar. Tambah file Rp 3.000 per file, dikasih tahu di awal.' },
+  { k: '04', t: 'Anak ramai? Aman', d: 'Studio keluarga sejak 2014. Udah biasa nge-handle yang lari-larian, yang ngumpet, yang gak mau senyum.' }
 ]
 </script>
 
@@ -20,14 +20,14 @@ const points = [
             <span>Tentang kami</span>
           </div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2rem,7.5vw,3.25rem)] md:text-5xl lg:text-6xl">
-            Mereka bilang cuma foto. Tapi tiap kali
+            Katanya cuma foto. Tapi tiap
             <span class="h-editorial text-clay-600 italic">lewat ruang tamu</span>,
             mereka berhenti sebentar.
           </h2>
         </div>
         <div class="lg:col-span-6 lg:col-start-7 lg:pt-12">
           <p class="reveal text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed max-w-[55ch]">
-            Gak buru-buru. Kami arahin satu-satu, bisa cetak hari itu juga, bingkai langsung jadi. Yang kalian bawa pulang bukan cuma file &mdash; tapi kenangan yang bisa dipajang.
+            Sharing your moment with us &mdash; itu tagline lama kami, dan masih kepake sampai sekarang. Diarahin satu-satu, dicetak hari itu, bingkai selesai sebelum kalian pulang. Yang dibawa pulang bukan file di HP, tapi sesuatu yang bisa nempel di tembok rumah.
           </p>
         </div>
       </div>

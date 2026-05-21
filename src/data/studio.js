@@ -1,7 +1,7 @@
 // Centralized package data — derived from studio-brief.md
 export const STUDIO = {
   name: 'Fantasy Studio Foto',
-  tagline: 'Studio foto keluarga di Pelabuhanratu',
+  tagline: 'Sharing your moment with us — studio foto keluarga di Pelabuhanratu',
   address:
     'Ruko Tamansari Blok M7 No. 36/37, Batu Sapi, Pelabuhanratu, Kab. Sukabumi, Jawa Barat',
   maps: 'https://share.google/duDYiqpejGD3JA1bp',
@@ -22,64 +22,64 @@ export const STUDIO = {
 export const HORIZONTAL_PANELS = [
   {
     kicker: '01 — Family',
-    title: 'Potret keluarga\ndalam satu bingkai',
-    body: 'Setiap anggota dapet ruangnya sendiri di frame. Gak ada yang ke-crop, gak ada yang ngumpet di belakang.',
+    title: 'Satu rumah,\nsatu bingkai',
+    body: 'Dari kakek sampai cucu paling kecil, semua dapet tempatnya. Kami jaga biar tatapan kalian semua arahnya sama.',
     seed: 'family-warm-2',
     tone: 'cream'
   },
   {
     kicker: '02 — Wisuda',
-    title: 'Hari kelulusan\ndijaga selamanya',
-    body: 'Toga, ijazah, senyum bangga keluarga — kami arahin biar gestur kalian terlihat natural, bukan kaku.',
+    title: 'Hari kelulusan,\ndisimpan rapi',
+    body: 'Toga masih anget, ijazah baru selesai dipegang. Kami abadikan sebelum harinya berlalu jadi cerita lama.',
     seed: 'graduation-soft-3',
     tone: 'clay'
   },
   {
     kicker: '03 — Maternity',
-    title: 'Menyambut\ndatangnya kehidupan',
-    body: 'Sesi yang lembut dan tenang. Pencahayaan hangat, tone warna yang menenangkan, momen menjelang kelahiran.',
+    title: 'Sebelum dia\ndatang ke dunia',
+    body: 'Cahaya dipelanin. Suara dikecilin. Sesi yang tenang buat momen sembilan bulan yang gak akan datang dua kali.',
     seed: 'maternity-warm-9',
     tone: 'sage'
   },
   {
     kicker: '04 — Prewedding',
-    title: 'Cerita berdua\nsebelum hari itu',
-    body: 'Studio atau lokasi luar — paket prewedding kami fleksibel, dari intim 15 menit sampai sehari penuh.',
+    title: 'Cerita berdua,\nsebelum harinya tiba',
+    body: 'Di studio atau di tempat yang berarti buat kalian. Paket fleksibel — dari sesi singkat sampai sehari penuh.',
     seed: 'prewed-romantic-1',
     tone: 'ember'
   },
   {
     kicker: '05 — Wedding',
-    title: 'Hari sakral\ndalam album jumbo',
-    body: 'Album 100 foto, video cinematic, sampai dokumentasi 9 jam penuh. Kami susun jadi memori yang ngalir.',
+    title: 'Janji yang diucap\ncuma sekali',
+    body: 'Album jumbo seratus foto, video cinematic, dokumentasi sembilan jam. Biar tahun-tahun nanti, kalian masih bisa lihat lagi.',
     seed: 'wedding-celebration-7',
     tone: 'cream'
   },
   {
     kicker: '06 — Solo',
-    title: 'Potret diri\ntanpa terburu-buru',
-    body: 'Sesi sendirian buat portfolio, kado, atau sekadar punya foto diri yang enak dilihat lima tahun lagi.',
+    title: 'Foto sendiri,\ntanpa buru-buru',
+    body: 'Buat portofolio, hadiah ke diri sendiri, atau cuma karena ngerasa pengen. Sesi sendirian, dengan tempo kalian.',
     seed: 'solo-warm-portrait',
     tone: 'clay'
   },
   {
     kicker: '07 — Duo',
-    title: 'Berdua sama\nyang paling dekat',
-    body: 'Sahabat, saudara, atau pasangan. Dua orang, satu frame, dengan tone hangat khas studio kami.',
+    title: 'Berdua,\norang paling dekat',
+    body: 'Sahabat lama, kakak adik, atau pasangan diam-diam. Dua orang, satu frame, satu cerita yang kalian bawa pulang.',
     seed: 'duo-bestie-warm',
     tone: 'sage'
   },
   {
     kicker: '08 — Trio',
-    title: 'Bertiga\ndalam satu cerita',
-    body: 'Geng kecil, saudara kandung, atau trio bestie. Komposisi tiga orang yang seimbang dan natural.',
+    title: 'Tiga orang,\nsatu cerita',
+    body: 'Tiga sahabat, tiga saudara, tiga generasi. Komposisi yang seimbang, gak ada yang ke-pinggir.',
     seed: 'trio-warm-tone',
     tone: 'ember'
   },
   {
     kicker: '09 — Bersama',
-    title: 'Rame-rame\ndalam satu frame',
-    body: 'Reuni, tim kerja, atau keluarga besar. Kami biasa nge-handle 18 orang lebih, semua kebagian ruang di frame.',
+    title: 'Rame-rame,\nsemua kebagian',
+    body: 'Reuni, tim kantor, keluarga besar. Pernah delapan belas orang lebih — semua kelihatan, semua dapet ruangnya.',
     seed: 'bersama-group-warm',
     tone: 'cream'
   }
@@ -89,7 +89,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'family',
     title: 'Foto Family',
-    summary: 'Untuk keluarga 4 sampai 15+ orang. Lengkap dengan cetak dan bingkai.',
+    summary: 'Buat keluarga 4 sampai 15+ orang. Semua kebagian frame, semua bawa pulang cetakan.',
     items: [
       {
         name: 'Paket 1',
@@ -132,7 +132,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'group',
     title: 'Foto Group / Bersama',
-    summary: 'Sesi bareng tim, organisasi, atau rombongan keluarga besar.',
+    summary: 'Buat tim, organisasi, atau rombongan keluarga besar. Sampai 30+ orang masih cukup.',
     items: [
       {
         name: 'Paket 1',
@@ -175,7 +175,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'maternity',
     title: 'Maternity',
-    summary: 'Sesi tenang menyambut buah hati. Dipotret dengan pendekatan lembut.',
+    summary: 'Sesi tenang sebelum hari kelahiran. Cahaya pelan, tempo pelan, gak ada yang diburu.',
     items: [
       {
         name: 'Paket 1',
@@ -209,7 +209,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'wisuda',
     title: 'Wisuda',
-    summary: 'Toga, ijazah, dan senyum bangga keluarga.',
+    summary: 'Toga, ijazah, dan keluarga yang bangga. Sebelum harinya pergi.',
     items: [
       {
         name: 'Paket 1',
@@ -243,7 +243,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'prewedding-studio',
     title: 'Prewedding Studio',
-    summary: 'Sesi prewedding intim di dalam studio.',
+    summary: 'Sesi berdua di dalam studio. Tenang, tertutup, gak ada yang ngeliatin dari pinggir jalan.',
     items: [
       {
         name: 'Paket 1',
@@ -286,7 +286,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'prewedding-premium',
     title: 'Prewedding Lokasi (Premium)',
-    summary: 'Outdoor / lokasi pilihan, dengan crew dan soft file.',
+    summary: 'Outdoor atau lokasi pilihan kalian. Crew lengkap, soft file, sampai video cinematic.',
     items: [
       {
         name: 'Paket 1',
@@ -321,7 +321,7 @@ export const PACKAGE_GROUPS = [
   {
     id: 'wedding',
     title: 'Wedding',
-    summary: 'Liputan hari sakral. Album jumbo, video cinematic, crew lengkap.',
+    summary: 'Liputan hari sakral. Album jumbo, video cinematic, crew yang gak ketinggalan satu momen pun.',
     items: [
       {
         name: 'Paket 1',

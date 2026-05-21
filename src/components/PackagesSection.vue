@@ -19,13 +19,13 @@ function group(id) {
           <div class="reveal eyebrow"><span class="dot"></span><span>Daftar paket</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl lg:text-7xl">
             Pilih cara kalian
-            <span class="h-editorial italic text-clay-600">mengenang</span>
-            moment ini.
+            <span class="h-editorial italic text-clay-600">menyimpan</span>
+            hari ini.
           </h2>
         </div>
         <div class="lg:col-span-5">
           <p class="reveal text-[14.5px] sm:text-[15px] md:text-[16px] text-clay-700/85 leading-relaxed max-w-[42ch]">
-            Tabel di bawah persis seperti yang dipajang di studio. Penambahan file Rp 3.000/file untuk paket yang menyertakan file edit. Ada yang ngeganjel? Tanya langsung lewat WhatsApp.
+            Daftar yang sama persis kayak yang nempel di dinding studio. Tambah file Rp 3.000 per file untuk paket dengan file edit. Mau nanya dulu? Boleh banget &mdash; chat aja lewat WhatsApp.
           </p>
         </div>
       </div>

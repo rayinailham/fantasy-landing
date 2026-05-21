@@ -19,19 +19,19 @@ import { HERO_IMAGES } from '../data/images'
         <div class="lg:col-span-7 xl:col-span-7">
           <div class="reveal eyebrow mb-5 sm:mb-7">
             <span class="dot"></span>
-            <span>Pelabuhanratu, Sukabumi · Sejak 2014</span>
+            <span>Sharing Your Moment With Us · Sejak 2014</span>
           </div>
 
           <h1 class="reveal h-display text-[clamp(2.5rem,11vw,4.5rem)] sm:text-[10vw] lg:text-[7vw] xl:text-[6.2vw] leading-[0.9] sm:leading-[0.88]">
-            <span class="block">Momen cepat berlalu.</span>
+            <span class="block">Hari biasa.</span>
             <span class="block">
-              Foto
-              <span class="h-editorial align-baseline text-clay-600 italic">enggak</span>.
+              Yang nanti
+              <span class="h-editorial align-baseline text-clay-600 italic">dikangenin</span>.
             </span>
           </h1>
 
           <p class="reveal mt-6 sm:mt-8 max-w-[52ch] text-[14.5px] sm:text-[15px] md:text-[17px] text-clay-700/85 leading-relaxed">
-            Di sini momen kalian dijaga. Diarahin pelan-pelan, dicetak hari itu juga, dibingkai buat dipajang bertahun-tahun.
+            Sore Minggu pas kumpul lengkap. Senyum anak yang baru lulus. Pelukan dari Bapak yang gak pernah difoto. Bagi momennya bareng kami &mdash; biar besok masih bisa diliat lagi.
           </p>
 
           <div class="reveal mt-7 sm:mt-9 flex flex-wrap items-center gap-3">
@@ -112,9 +112,9 @@ import { HERO_IMAGES } from '../data/images'
             <!-- floating mini-card di zona overlap antara back & front (sm+ only) — geser jauh ke kiri biar tidak nutupi muka -->
             <div class="reveal hidden sm:block absolute top-[27%] left-[8%] lg:left-[2%] shell z-30">
               <div class="core p-4 max-w-[200px]">
-                <div class="font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">Last booking</div>
+                <div class="font-mono text-[10px] tracking-[0.28em] uppercase text-clay-600/70">Sesi terakhir</div>
                 <div class="mt-2 text-[13px] leading-snug text-ink-900">
-                  Sesi <span class="font-medium">keluarga bahagia</span> &mdash; family 5 orang, frame 12R.
+                  Keluarga <span class="font-medium">lima orang</span> &mdash; tiga generasi, satu frame 12R.
                 </div>
                 <div class="mt-3 flex -space-x-1.5">
                   <span v-for="(_, i) in 4" :key="i" class="w-6 h-6 rounded-full ring-2 ring-white"

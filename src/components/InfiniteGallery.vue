@@ -23,12 +23,12 @@ const rowC = computed(() => [...tilesC.value, ...tilesC.value])
           <div class="reveal eyebrow"><span class="dot"></span><span>Arsip kecil</span></div>
           <h2 class="reveal h-display mt-5 sm:mt-6 text-[clamp(2.25rem,9vw,3.75rem)] md:text-6xl lg:text-7xl">
             <span class="h-editorial italic text-clay-600">Ratusan keluarga</span>
-            udah percayain momen mereka ke sini.
+            udah bagi momennya bareng kami.
           </h2>
         </div>
         <div class="lg:col-span-4 lg:col-start-9">
           <p class="reveal text-[14.5px] sm:text-[15px] text-clay-700/85 leading-relaxed max-w-[40ch]">
-            Galeri ini bergulir terus &mdash; biarin jalan sebentar, mungkin kalian nemu vibe yang pas buat sesi kalian sendiri.
+            Galerinya jalan terus &mdash; dibiarin aja sebentar. Mungkin nemu tone atau gestur yang pas buat sesi kalian nanti.
           </p>
         </div>
       </div>
